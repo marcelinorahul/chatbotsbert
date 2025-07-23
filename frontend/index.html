@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Helpdesk Universitas Jambi</title>
+    <link rel="stylesheet" href="/frontend/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- btn Widgetnye -->
+    <div class="chatbot-widget-button">
+        <div class="widget-icon">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <div class="widget-text">Butuh bantuan?</div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <!-- Header Chatbot gueh -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-left">
+                <div class="chatbot-logo">
+                    <img src="/assets/Logo Universitas Jambi (Unja).png" alt="UNJA Logo">
+                </div>
+                <div class="chatbot-info">
+                    <div class="chatbot-title">Chatbot UNJA</div>
+                    <div class="chatbot-status">
+                        <span class="status-indicator online"></span>
+                        <span class="status-text">Online</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-header-right">
+                <div class="chatbot-actions">
+                    <button class="action-btn" id="clear-btn" title="Bersihkan Percakapan">
+                        <i class="fas fa-broom"></i>
+                    </button>
+                    <button class="action-btn" id="print-btn" title="Cetak Percakapan">
+                        <i class="fas fa-print"></i>
+                    </button>
+                    <button class="action-btn" id="chatbot-info-btn" title="Tentang Chatbot">
+                        <i class="fas fa-robot"></i>
+                    </button>
+                    <button class="action-btn" id="close-btn" title="Tutup">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Chat Tab (Default) -->
+                <div class="tab-pane active" id="chat-tab">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="chat-date-separator">
+                            <span id="today-date">Hari ini</span>
+                        </div>
+                        <!-- Pesan sambutan dihapus, akan ditangani oleh JavaScript -->
+                    </div>
+                    
+                    <!-- Quick Reply Suggestions -->
+                    <div class="quick-replies">
+                        <div class="quick-reply-title">Pertanyaan Populer:</div>
+                        <div class="quick-reply-items">
+                            <button class="quick-reply-item">Cara reset password siakad</button>
+                            <button class="quick-reply-item">Kapan terakhir bayar UKT</button>
+                            <button class="quick-reply-item">Info Beasiswa</button>
+                            <button class="quick-reply-item">informasi magang</button>
+                            <button class="quick-reply-item">Cara cuti Kuliah</button>
+                        </div>
+                    </div>
+
+                    <!-- Inputan chtny -->
+                    <div class="chat-input">
+                        <div class="chat-input-wrapper">
+                            <input type="text" id="user-input" placeholder="Ketik pertanyaan kamu di sini...">
+                            <div class="input-actions">
+                                <button class="input-action-btn" id="voice-btn" title="Voice Input">
+                                    <i class="fas fa-microphone"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button id="send-btn" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="/frontend/chatbot.js"></script>
+</body>
+</html>
